@@ -24,22 +24,22 @@ export class ConsentsServices {
   constructor(private http: HttpClient) {
   }
 
-  getData() {
+  getAllConsent() {
     return (customers.custom);
     // simulation get data;
-    // const url = this.url + '/custom';
+    // const url = this.url + '/consents';
     // return this.http.get(url, this.httpOptions);
   }
 
 
-  postForms(requestBody) {
+  addNewConsent(requestBody) {
     customers.custom.push({
       name: requestBody.name,
       email: requestBody.email,
       consents: requestBody.consents
     });
     // simulation post data
-    // const url = this.url + '/customer';
+    // const url = this.url + '/consent';
     // return this.http.post(url, requestBody, this.httpOptions);
   }
 

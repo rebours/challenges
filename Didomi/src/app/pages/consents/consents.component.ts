@@ -23,7 +23,7 @@ export class ConsentsComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private consentService : ConsentsServices) {
-    this.dataSource.data  = this.consentService.getData();
+    this.dataSource.data  = this.consentService.getAllConsent();
 // //    simulation call API
 //     this.consentService.getData()
 //       .subscribe(res => {

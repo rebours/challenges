@@ -34,7 +34,7 @@ export class GiveConsentComponent implements OnInit {
   clickedButton() {
     // no subscribe
     this.mapCheckBoxString();
-    this.consentsService.postForms(this.formulary);
+    this.consentsService.addNewConsent(this.formulary);
     this.router.navigate(['/consents']);
   }
 
