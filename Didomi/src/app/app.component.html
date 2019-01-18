@@ -1,12 +1,14 @@
-<!-- content Routing -->
-
-
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
-    <app-sidebar></app-sidebar>
-  </mat-drawer>
-  <mat-drawer-content>
-    <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+<ng-container>
+  <mat-sidenav-container class="example-container">
+    <!--<app-sidebar></app-sidebar>-->
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
+                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+                 [fixedBottomGap]="options.value.bottom">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content [formGroup]="options">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>
 

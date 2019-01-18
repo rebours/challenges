@@ -1,15 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { GiveConsentComponent } from './pages/give-consent/give-consent.component';
-import { ConsentsComponent } from './pages/consents/consents.component';
-
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+// Routing
+import {AppRoutingModule} from './app-routing.module';
+
+// Pages Component
+import {AppComponent} from './app.component';
+import {GiveConsentComponent} from './pages/give-consent/give-consent.component';
+import {ConsentsComponent} from './pages/consents/consents.component';
+
+// Shared Component
+import {SidebarComponent} from './shared/sidebar/sidebar.component';
 
 // import Angular material module
 import {AngularMaterialModule} from "./angular-material/angular-material.module";
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +31,14 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
