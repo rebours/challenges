@@ -35,7 +35,7 @@ export class ConsentsServices {
   postForms(requestBody) {
     customers.custom.push({
       name: requestBody.name,
-      email: requestBody.name,
+      email: requestBody.email,
       consents: requestBody.consents
     });
     // simulation post data
