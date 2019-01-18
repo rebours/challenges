@@ -1,7 +1,29 @@
-<p>
-  give-consent works!
-</p>
+<form class="form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Name" [(ngModel)]="formulary.name" name="name">
+  </mat-form-field>
 
+  <mat-form-field class="example-full-width" style="margin-left: 5%">
+    <input matInput placeholder="Email" [(ngModel)]="formulary.email" name="email">
+  </mat-form-field>
+</form>
 
-<mat-button>Give consent</mat-button>
-<mat-button>Collected consents</mat-button>
+<h5 class="modif-agree">
+  I agree to :
+</h5>
+
+<section class="checkbox-modif">
+  <section>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.receiveNewletter" (change)="checkedButton()">Receive newsletter</mat-checkbox>
+  </section>
+
+  <section>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.targetedAds" (change)="checkedButton()">Be shown targeted ads</mat-checkbox>
+  </section>
+
+  <section>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.anonymousVisit" (change)="checkedButton()">Contribute to anonymous visit statistics</mat-checkbox>
+  </section>
+</section>
+
+<button mat-raised-button color="primary" [disabled]="buttonDisable" (click)="clickedButton()">Give consent</button>

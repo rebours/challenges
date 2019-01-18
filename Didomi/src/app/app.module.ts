@@ -20,6 +20,9 @@ import {SidebarComponent} from './shared/sidebar/sidebar.component';
 // import Angular material module
 import {AngularMaterialModule} from "./angular-material/angular-material.module";
 
+// services
+import {ConsentsServices} from "./services/consents";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,7 @@ import {AngularMaterialModule} from "./angular-material/angular-material.module"
     ReactiveFormsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [ConsentsServices],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -4,10 +4,22 @@ import {NgModule} from "@angular/core";
 const modules = [
   MatButtonModule,
   MatRippleModule,
-  MatSidenavModule
+  MatSidenavModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatTableModule,
+  MatPaginatorModule
 ];
 
-import {MatButtonModule, MatRippleModule, MatSidenavModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatTableModule,
+  MatPaginatorModule
+} from '@angular/material';
 
 @NgModule({
   imports: [...modules],

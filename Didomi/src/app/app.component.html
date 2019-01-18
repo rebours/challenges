@@ -1,13 +1,13 @@
 <ng-container>
   <mat-sidenav-container class="example-container">
     <!--<app-sidebar></app-sidebar>-->
-    <mat-sidenav #sidenav mode="side" opened class="example-sidenav"
-                 [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
-                 [fixedBottomGap]="options.value.bottom">
+    <mat-sidenav #sidenav mode="side" opened class="example-sidenav">
       <app-sidebar></app-sidebar>
     </mat-sidenav>
-    <mat-sidenav-content [formGroup]="options">
-      <router-outlet></router-outlet>
+    <mat-sidenav-content>
+      <div class="container" style="text-align: center">
+        <router-outlet></router-outlet>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </ng-container>
