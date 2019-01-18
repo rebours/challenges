@@ -4,8 +4,8 @@ import {environment} from "../../environments/environment";
 
 export class customers {
   public static custom = [
-    { name: 'pierre-louis', email: "pierre-louis.rebours@epitech.eu", consents: 'Receive newsletter' },
-    { name: 'Alain', email: "alain.schmits@gmail.fr", consents: 'Receive newsletter, Be shown targeted ads' }]
+    { name: 'pierre-louis', email: "pierre-louis.rebours@epitech.eu", consents: 'Receive newsletter.' },
+    { name: 'Alain', email: "alain.schmits@gmail.fr", consents: 'Receive newsletter. Be shown targeted ads.' }]
 }
 
 

@@ -14,15 +14,15 @@
 
 <section class="checkbox-modif">
   <section>
-    <mat-checkbox class="example-margin" [(ngModel)]="formulary.receiveNewletter" (change)="checkedButton()">Receive newsletter</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.receiveNewletter" (change)="checkedButton()">{{consentEnum.receiveNewletter}}</mat-checkbox>
   </section>
 
   <section>
-    <mat-checkbox class="example-margin" [(ngModel)]="formulary.targetedAds" (change)="checkedButton()">Be shown targeted ads</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.targetedAds" (change)="checkedButton()">{{consentEnum.targetedAds}}</mat-checkbox>
   </section>
 
   <section>
-    <mat-checkbox class="example-margin" [(ngModel)]="formulary.anonymousVisit" (change)="checkedButton()">Contribute to anonymous visit statistics</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.anonymousVisit" (change)="checkedButton()">{{consentEnum.anonymousVisit}}</mat-checkbox>
   </section>
 </section>
 

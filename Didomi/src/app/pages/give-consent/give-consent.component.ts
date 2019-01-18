@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Form} from "../../models/form";
 import {Router} from "@angular/router";
 import {ConsentsServices} from "../../services/consents";
+import {consentsEnum} from "../../enums/consents.enum";
 
 @Component({
   selector: 'app-give-consent',
@@ -11,6 +12,7 @@ import {ConsentsServices} from "../../services/consents";
 export class GiveConsentComponent implements OnInit {
   formulary: Array<Form> = [];
   buttonDisable = true;
+  consentEnum = consentsEnum;
 
   constructor(private router: Router, private consentsService: ConsentsServices) {
     this.formulary['consents'] = "";
@@ -38,13 +40,13 @@ export class GiveConsentComponent implements OnInit {
 
   mapCheckBoxString() {
     if (this.formulary['receiveNewletter']) {
-      this.formulary['consents'] = this.formulary['consents'].concat(' Receive newsletter. ');
+      this.formulary['consents'] = this.formulary['consents'].concat(this.consentEnum.receiveNewletter);
     }
     if (this.formulary['targetedAds']) {
-      this.formulary['consents'] = this.formulary['consents'].concat(' Be shown targeted ads. ');
+      this.formulary['consents'] = this.formulary['consents'].concat(this.consentEnum.targetedAds);
     }
     if (this.formulary['anonymousVisit']) {
-      this.formulary['consents'] = this.formulary['consents'].concat(' Contribute to anonymous visit statistics. ');
+      this.formulary['consents'] = this.formulary['consents'].concat(this.consentEnum.anonymousVisit);
     }
   }
 
