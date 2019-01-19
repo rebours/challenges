@@ -33,6 +33,8 @@ export class ConsentsComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    // add an id on the "next page" for the test 2e2
+    document.querySelector('.mat-paginator-navigation-next').setAttribute('id', 'nextPaginator')
   }
 
 }
