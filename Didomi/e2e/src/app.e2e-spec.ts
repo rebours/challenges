@@ -28,11 +28,11 @@ describe('workspace-project App', () => {
     await expect(await page.getNameInTheTable().getText()).toEqual(userName);
   });
 
-  it('The table Name should have ' + email, async () => {
+  it('The table email should have ' + email, async () => {
     await expect(await page.getEmailInTheTable().getText()).toEqual(email);
   });
 
-  it('The table Name should have Receive newsletter.' , async () => {
+  it('The table consents should have Receive newsletter.' , async () => {
     await expect(await page.getConsentsInTheTable().getText()).toEqual('Receive newsletter.');
   });
 
