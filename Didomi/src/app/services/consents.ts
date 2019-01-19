@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from "../../environments/environment";
 
+
+// false data
 export class customers {
   public static custom = [
     { name: 'pierre-louis', email: "pierre-louis.rebours@epitech.eu", consents: 'Receive newsletter.' },

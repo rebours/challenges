@@ -3,11 +3,6 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
 import {ConsentsServices} from "../../services/consents";
 
-export interface clientInformation {
-  name: string;
-  email: string;
-  consents: string;
-}
 
 @Component({
   selector: 'app-consents',
@@ -22,17 +17,25 @@ export class ConsentsComponent implements OnInit {
   dataSource = new MatTableDataSource();
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  constructor(private consentService : ConsentsServices) {
-    this.dataSource.data  = this.consentService.getAllConsent();
-// //    simulation call API
-//     this.consentService.getData()
-//       .subscribe(res => {
-//         this.dataSource.data = res;
-//       })
+  constructor(private consentService: ConsentsServices) {
+
+    // fake call api
+    this.dataSource.data = this.consentService.getAllConsent();
+
+    // real call api
+    // this.consentService.getAllConsent()
+    //   .subscribe((res) => {
+    //       this.dataSource.data = res
+    //     },
+    //     (error) => {
+    //       console.log('get all consent error ', error)
+    //     })
   }
 
   ngOnInit() {
+    // link the paginator to the table
     this.dataSource.paginator = this.paginator;
+
     // add an id on the "next page" for the test 2e2
     document.querySelector('.mat-paginator-navigation-next').setAttribute('id', 'nextPaginator')
   }

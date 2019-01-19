@@ -32,13 +32,6 @@ export class GiveConsentComponent implements OnInit {
   }
 
   clickedButton() {
-    // no subscribe
-    this.mapCheckBoxString();
-    this.consentsService.addNewConsent(this.formulary);
-    this.router.navigate(['/consents']);
-  }
-
-  mapCheckBoxString() {
     if (this.formulary['receiveNewletter']) {
       this.formulary['consents'] = this.formulary['consents'].concat(this.consentEnum.receiveNewletter);
     }
@@ -48,6 +41,17 @@ export class GiveConsentComponent implements OnInit {
     if (this.formulary['anonymousVisit']) {
       this.formulary['consents'] = this.formulary['consents'].concat(this.consentEnum.anonymousVisit);
     }
-  }
 
+    // fake call API
+    this.consentsService.addNewConsent(this.formulary);
+    this.router.navigate(['/consents']);
+
+    // real call API
+    // this.consentsService.addNewConsent(this.formulary).subscribe(
+    //   (data) => {
+    //     this.router.navigate(['/consents'])
+    //   },
+    //   (error) => console.log('add new consent error', error));
+
+  }
 }

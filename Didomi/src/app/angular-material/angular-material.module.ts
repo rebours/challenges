@@ -1,4 +1,13 @@
 import {NgModule} from "@angular/core";
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatPaginatorModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatTableModule
+} from '@angular/material';
 
 // import every material module you ned
 const modules = [
@@ -11,18 +20,9 @@ const modules = [
   MatPaginatorModule
 ];
 
-import {
-  MatButtonModule,
-  MatRippleModule,
-  MatSidenavModule,
-  MatInputModule,
-  MatCheckboxModule,
-  MatTableModule,
-  MatPaginatorModule
-} from '@angular/material';
-
 @NgModule({
   imports: [...modules],
   exports: [...modules]
 })
-export class AngularMaterialModule {}
+export class AngularMaterialModule {
+}

@@ -4,7 +4,7 @@ import {GiveConsentComponent} from "./pages/give-consent/give-consent.component"
 import {ConsentsComponent} from "./pages/consents/consents.component";
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/give-consent'},
+  {path: '', pathMatch: 'full', redirectTo: '/give-consent'},
   {path: 'give-consent', component: GiveConsentComponent},
   {path: 'consents', component: ConsentsComponent},
 

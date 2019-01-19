@@ -14,16 +14,24 @@
 
 <section class="checkbox-modif">
   <section>
-    <mat-checkbox class="example-margin" id="receiveNewsLetter" [(ngModel)]="formulary.receiveNewletter" (change)="checkedButton()">{{consentEnum.receiveNewletter}}</mat-checkbox>
+    <mat-checkbox class="example-margin" id="receiveNewsLetter" [(ngModel)]="formulary.receiveNewletter"
+                  (change)="checkedButton()">{{consentEnum.receiveNewletter}}
+    </mat-checkbox>
   </section>
 
   <section>
-    <mat-checkbox class="example-margin" [(ngModel)]="formulary.targetedAds" (change)="checkedButton()">{{consentEnum.targetedAds}}</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.targetedAds" (change)="checkedButton()">
+      {{consentEnum.targetedAds}}
+    </mat-checkbox>
   </section>
 
   <section>
-    <mat-checkbox class="example-margin" [(ngModel)]="formulary.anonymousVisit" (change)="checkedButton()">{{consentEnum.anonymousVisit}}</mat-checkbox>
+    <mat-checkbox class="example-margin" [(ngModel)]="formulary.anonymousVisit" (change)="checkedButton()">
+      {{consentEnum.anonymousVisit}}
+    </mat-checkbox>
   </section>
 </section>
 
-<button mat-raised-button color="primary" id="buttonDisable" [disabled]="buttonDisable" (click)="clickedButton()">Give consent</button>
+<button mat-raised-button color="primary" id="buttonDisable" [disabled]="buttonDisable" (click)="clickedButton()">Give
+  consent
+</button>
